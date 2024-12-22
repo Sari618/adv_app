@@ -1,4 +1,3 @@
-
 import 'package:adv_app/peresentaion/resources/color_manger.dart';
 import 'package:adv_app/peresentaion/resources/font_manger.dart';
 import 'package:adv_app/peresentaion/resources/styles_manger.dart';
@@ -51,6 +50,8 @@ ThemeData getApplicationTheme() {
     textTheme: TextTheme(
       displayLarge:
           getSemiBoldStyle(color: ColorManger.darkGrey, fontSize: FontSize.s16),
+      headlineMedium:
+          getSemiBoldStyle(color: ColorManger.darkGrey, fontSize: FontSize.s14),
       titleMedium:
           getmediumStyle(color: ColorManger.lightgrey, fontSize: FontSize.s14),
       bodySmall: getRegularStyle(
@@ -74,19 +75,21 @@ ThemeData getApplicationTheme() {
       ),
       //enabled border stle
       enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorManger.primary, width: AppSize.s1_5),
+          borderSide:
+              BorderSide(color: ColorManger.primary, width: AppSize.s1_5),
           borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
-          //foucsed border stle
+      //foucsed border stle
       focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: ColorManger.grey, width: AppSize.s1_5),
           borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
-          //error border style 
+      //error border style
       errorBorder: OutlineInputBorder(
           borderSide: BorderSide(color: ColorManger.error, width: AppSize.s1_5),
           borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
-          //foucesd error border
-          focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorManger.primary, width: AppSize.s1_5),
+      //foucesd error border
+      focusedErrorBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: ColorManger.primary, width: AppSize.s1_5),
           borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
     ),
   );

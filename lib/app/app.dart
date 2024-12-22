@@ -1,3 +1,4 @@
+import 'package:adv_app/peresentaion/resources/routes_manger.dart';
 import 'package:adv_app/peresentaion/theme_manger.dart';
 import 'package:flutter/material.dart';
 
@@ -10,34 +11,19 @@ class MyApp extends StatefulWidget {
   factory MyApp() => _instance;
 
   @override
-  State<MyApp> createState() => _MyWidgetState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _MyWidgetState extends State<MyApp> {
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
-
-class Test extends StatelessWidget {
-  const Test({super.key});
-
-  void updateAppState() {
-    MyApp().appstate = 11;
-  }
-  void getAppState(){
-    print(MyApp().appstate);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(theme: getApplicationTheme(),);
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute:Routes.splashRoute,
+      theme: getApplicationTheme(),);
+    
   }
 }
 
 
-class person {
-
-  
-}
